@@ -105,13 +105,13 @@ d4u.clipCoupons = function(ph, page) {
   function(result) {
     console.log('clipping attempt completed\n  results: ' + JSON.stringify(result));
 
-    // leave up to 10 unclipped due to occasional permanently unclippable coupons
-    if (result.count > 0 && result.unclipped > 10) {
-      console.log('refreshing coupon page');
-      setTimeout(page.open(d4u.currentPage), 5000); // refresh
+    if (!d4u.clipped) {
+      d4u.clipped = true;
+      console.log('refreshing coupon page in 15s');
+      setTimeout(function() { page.open(d4u.currentPage); }, 15000);
     } else {
-      console.log('proceeding with logout');
-      setTimeout(d4u.logout(ph, page), 10000);
+      console.log('proceeding with logout in 20s');
+      setTimeout(function() { d4u.logout(ph, page); }, 20000);
     }
   });
 };

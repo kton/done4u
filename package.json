@@ -11,6 +11,7 @@
     "phantom": "^0.8.3"
   },
   "scripts": {
+    "start": "node done4u.js",
     "test": "jshint . && jscs ."
   }
 }
