@@ -1,0 +1,16 @@
+{
+  "name": "done4u",
+  "description": "clips your safeway j4u coupons",
+  "main": "done4u.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kton/done4u.git"
+  },
+  "homepage": "https://github.com/kton/done4u",
+  "dependencies": {
+    "phantom": "^0.8.3"
+  },
+  "scripts": {
+    "test": "jshint . && jscs ."
+  }
+}
