@@ -107,11 +107,11 @@ d4u.clipCoupons = function(ph, page) {
 
     if (!d4u.clipped) {
       d4u.clipped = true;
-      console.log('refreshing coupon page in 15s');
-      setTimeout(function() { page.open(d4u.currentPage); }, 15000);
+      console.log('refreshing coupon page in 180s');
+      setTimeout(function() { page.open(d4u.currentPage); }, 180000);
     } else {
-      console.log('proceeding with logout in 20s');
-      setTimeout(function() { d4u.logout(ph, page); }, 20000);
+      console.log('proceeding with logout in 30s');
+      setTimeout(function() { d4u.logout(ph, page); }, 30000);
     }
   });
 };
